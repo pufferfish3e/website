@@ -1,3 +1,21 @@
+let isScrolling;
+const navbar = document.querySelector('.menu'); 
+
+window.addEventListener('scroll', () => {
+    isScrolling = true;
+    navbar.style.opacity = 0;
+
+    clearTimeout(navbar.timeout); 
+    navbar.timeout = setTimeout(() => { 
+        if (!isScrolling) {
+            navbar.style.opacity = 1; 
+        }
+    }, 1000); 
+});
+
+
+navbar.style.opacity = 1;
+
 function smoothScroll(targetId) {
   const targetElement = document.querySelector(targetId);
 
