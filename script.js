@@ -3,7 +3,8 @@ function smoothScroll(targetId) {
 
   if (targetElement) {
     targetElement.scrollIntoView({
-      behavior: 'smooth' 
+      behavior: 'smooth', 
+      easing: 'ease-in-out'
     });
   }
 }
