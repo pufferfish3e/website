@@ -13,7 +13,6 @@ window.addEventListener('scroll', () => {
     }, 1000); 
 });
 
-
 navbar.style.opacity = 1;
 
 function smoothScroll(targetId) {
@@ -35,7 +34,7 @@ navLinks.forEach(link => {
     smoothScroll(targetId);
   });
 });
-
+// fade-in
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelector('.menu').classList.add('fade-in');
   document.querySelector('.hello').classList.add('fade-in');
@@ -60,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+// type function
 const words = ["student.", "coder.", "programmer.", "developer."];
 let wordIndex = 0;
 let charIndex = 0;
@@ -96,6 +96,7 @@ function type() {
 
 type();
 
+// light/dark theme
 document.addEventListener('DOMContentLoaded', (theme) => {
   const themeToggle = document.getElementById('theme-toggle');
   const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
@@ -118,13 +119,11 @@ document.addEventListener('DOMContentLoaded', (theme) => {
     setTheme(newTheme);
   });
 
-  prefersDarkScheme.addEventListener((e) => {
+   prefersDarkScheme.addEventListener('change', (e) => {
     const newTheme = e.matches ? 'dark' : 'light';
     setTheme(newTheme);
   });
 });
-
-feather.replace();
 
   document.querySelectorAll('.icon-wrapper').forEach(wrapper => {
       wrapper.addEventListener('click', () => {
@@ -134,3 +133,29 @@ feather.replace();
           }, 300);
       });
   });
+
+feather.replace();
+
+document.addEventListener('DOMContentLoaded', function() {
+    const contactLink = document.getElementById('contact-link');
+    const contactPopup = document.getElementById('contact-popup');
+    if (contactLink && contactPopup) {
+        contactLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            contactPopup.style.display = 'flex';
+        });
+        contactPopup.addEventListener('click', (e) => {
+            if (e.target === contactPopup) {
+                contactPopup.style.display = 'none';
+            }
+        });
+    }
+    const githubLink = document.getElementById('github-link');
+    const whatsappLink = document.getElementById('whatsapp-link');
+    const mailLink = document.getElementById('mail-link');
+
+    if (githubLink) githubLink.href = 'https://github.com/pufferfishh3e';
+    if (whatsappLink) whatsappLink.href = 'https://wa.me/+6587681400?text=Hello';
+    if (mailLink) mailLink.href = 'mailto:kenslamat08@icloud.com';
+});
+
