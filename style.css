@@ -291,6 +291,7 @@ p {
 }
 
 .popup {
+   z-index: 10;
    display: none;
    position: fixed;
    top: 0;
@@ -311,3 +312,4 @@ p {
    color: var(--text-color);
    text-align: center;
 }
+

@@ -1,12 +1,13 @@
 let isScrolling;
+let scrollTimeout; 
 const navbar = document.querySelector('.menu'); 
 
 window.addEventListener('scroll', () => {
     isScrolling = true;
     navbar.style.opacity = 0;
 
-    clearTimeout(navbar.timeout); 
-    navbar.timeout = setTimeout(() => { 
+    clearTimeout(scrollTimeout); 
+    scrollTimeout = setTimeout(() => { 
         if (!isScrolling) {
             navbar.style.opacity = 1; 
         }
