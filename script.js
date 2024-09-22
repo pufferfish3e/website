@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const whatsappLink = document.getElementById('whatsapp-link');
     const mailLink = document.getElementById('mail-link');
 
-    if (githubLink) githubLink.href = 'https://github.com/pufferfishh3e';
+    if (githubLink) githubLink.href = 'https://github.com/pufferfish3e';
     if (whatsappLink) whatsappLink.href = 'https://wa.me/+6587681400?text=Hello';
     if (mailLink) mailLink.href = 'mailto:kenslamat08@icloud.com';
 });
