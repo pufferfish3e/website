@@ -88,7 +88,7 @@ function type() {
         }
     }
 
-    const typingSpeed = isDeleting ? 50 : 100;
+    const typingSpeed = isDeleting ? 100 : 150;
     const delay = isDeleting && charIndex === 0 ? 100 : typingSpeed;
 
     setTimeout(type, delay);
