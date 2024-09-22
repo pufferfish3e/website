@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }, {
-    threshold: 0.1 
+    threshold: 0.9
   });
 
   sections.forEach(section => {
@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', (theme) => {
     setTheme(prefersDarkScheme.matches ? 'dark' : 'light');
   }
 
-  themeToggle.addEventListener('click', () => {
+  themeToggle.addEventListener('click', (theme) => {
     const currentTheme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
     setTheme(newTheme);
@@ -123,3 +123,14 @@ document.addEventListener('DOMContentLoaded', (theme) => {
     setTheme(newTheme);
   });
 });
+
+feather.replace();
+
+  document.querySelectorAll('.icon-wrapper').forEach(wrapper => {
+      wrapper.addEventListener('click', () => {
+          wrapper.style.transform = 'scale(1.1)';
+          setTimeout(() => {
+              wrapper.style.transform = 'scale(1)';
+          }, 300);
+      });
+  });
