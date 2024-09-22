@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-const words = ["web designer.", "app developer.", "graphic artist.", "software engineer."];
+const words = ["student.", "coder.", "programmer.", "developer."];
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
